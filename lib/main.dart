@@ -1,35 +1,35 @@
-import 'package:aplicacao/ui/cadastro.dart';
-import 'package:aplicacao/ui/home_page.dart';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MaterialApp(
-      title: 'Named Routes Demo',
-      // Start the app with the "/" named route. In this case, the app starts
-      // on the FirstScreen widget.
-      initialRoute: '/',
-      routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) =>  HomePage(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
-        '/cadastrar': (context) =>  Cadastrar(),
-      },
-    ),
-  );}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
-    );
-  }
+import 'package:firebase_core/firebase_core.dart';
+ 
+import 'firebase_options.dart';
+ 
+import 'screens/chat_screen.dart';
+import 'screens/enter_room_screen.dart';
+ 
+void main() async {
+ WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
+ runApp(const MyApp());
 }
-
+ 
+class MyApp extends StatelessWidget {
+ const MyApp({Key? key}) : super(key: key);
+ 
+ @override
+ Widget build(BuildContext context) {
+   return MaterialApp(
+     debugShowCheckedModeBanner: false,
+     title: 'My.chat',
+     theme: ThemeData(
+       primarySwatch: Colors.blue,
+     ),
+     initialRoute: '/',
+     routes: {
+       '/': (context) => EnterRoomScreen(),
+       '/chat': (context) => const ChatScreen(),
+     },
+   );
+ }
+}

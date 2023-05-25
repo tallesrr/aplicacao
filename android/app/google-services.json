@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "518410047825",
+    "firebase_url": "https://teste-ad230-default-rtdb.firebaseio.com",
+    "project_id": "teste-ad230",
+    "storage_bucket": "teste-ad230.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518410047825:android:d01baf4987afcd75818370",
+        "android_client_info": {
+          "package_name": "com.example.aplicacao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518410047825-ineiuhten5eruullpgejb7t6r25739tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa9OUC7NdqDBFn2CjSo8Q3xYGfGZ6IMak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518410047825-ineiuhten5eruullpgejb7t6r25739tv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

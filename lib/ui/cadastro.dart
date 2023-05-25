@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Cadastrar extends StatelessWidget {
+  const Cadastrar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +13,8 @@ class Cadastrar extends StatelessWidget {
         TextFormField(),
         TextFormField(),
          TextButton(onPressed: (){
-          Navigator.pushNamed(context, '/');
-        }, child: Text('Cadastrar'))
+          Navigator.pushNamed(context, '/voltar');
+        }, child: const Text('Cadastrar'))
       ]),
     );
   }
